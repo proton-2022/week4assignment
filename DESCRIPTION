@@ -23,3 +23,6 @@ Imports:
     readr,
     tidyr
 VignetteBuilder: knitr
+URL: https://github.com/proton-2022/week4assignment 
+BugReports: https://github.com/proton-2022/week4assignment/issues
+
