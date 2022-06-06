@@ -7,3 +7,4 @@
 ^week4assginment.*\.tar\.gz$
 ^week4assginment.*\.tgz$
 ^\.travis\.yml$
+^LICENSE\.md$
