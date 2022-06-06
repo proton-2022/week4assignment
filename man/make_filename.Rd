@@ -17,10 +17,10 @@ A string in the format "accidient_\%d.csv.bz2".
 Generates a filename for a specific year.
 }
 \examples{
-fn <- make_filename(year="2020")  
+fn <- make_filename(year="2020")
 fn <- make_filename(year=2020)
-# input values that cannot be casted to an integer will result in an error or 
-# empty return array 
+# input values that cannot be casted to an integer will result in an error or
+# empty return array
 \dontrun{
 fn <- make_filename(year=NULL)
 fn <- make_filename(year="hello")

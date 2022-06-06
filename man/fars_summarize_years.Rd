@@ -20,13 +20,14 @@ for which data exist.
 Summarizes the number of accidents in each month for specific years.
 }
 \examples{
+\dontrun{
 summary_table <- fars_summarize_years(2013)
 summary_table <- fars_summarize_years(c(2013, 2014))
 summary_table <- fars_summarize_years("2013")
 
 # no column will be returned for invalid inputs
 summary_table <- fars_summarize_years(c(2013, "hello"))
-\dontrun{
-summary_table <- fars_summarize_years("hello") # will result in an error
+# error for single invalid inputs
+summary_table <- fars_summarize_years("hello")
 }
 }

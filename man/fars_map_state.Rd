@@ -23,11 +23,11 @@ accidents, if there are accidents to plot. Otherwise draw nothing.
 Plots the locations of accidents for a specific state in a year.
 }
 \examples{
+\dontrun{
 fars_map_state(1, 2013)
 fars_map_state(19, 2014)
-\dontrun{
-# error will be produced: 
+# error will be produced:
 fars_map_state(100, 2013) # invalid state.num
-fars_map_state(1, 2017) # invalid year 
+fars_map_state(1, 2017) # invalid year
 }
 }

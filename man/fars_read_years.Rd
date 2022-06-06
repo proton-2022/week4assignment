@@ -20,10 +20,11 @@ accidents in the year.
 Returns occurrence of accidents in a specific year.
 }
 \examples{
+\dontrun{
 dat <- fars_read_years(2013)
 dat <- fars_read_year(c(2013, 2014))
 dat <- fars_read_year("2013")
-\dontrun{
-dat <- fars_read_year(c(2013, "hello")) # returns NULL for "hello"
+# returns NULL for invalid inputs:
+dat <- fars_read_year(c(2013, "hello"))
 }
 }

@@ -17,9 +17,11 @@ a tibble containing the csv data.
 Read data from a csv file and constructs a tibble.
 }
 \examples{
+\dontrun{
 fn <- "data/accident_2013.csv.bz2"
 data <- fars_read(fn)
-# filename that does not exist gives an error. 
+}
+# filename that does not exist gives an error.
 \dontrun{
 fn <- NULL
 data <- fars_read(fn)
