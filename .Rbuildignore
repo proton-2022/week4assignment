@@ -3,3 +3,7 @@
 ^doc$
 ^Meta$
 ^README\.Rmd$
+^week4assginment\.Rcheck$
+^week4assginment.*\.tar\.gz$
+^week4assginment.*\.tgz$
+^\.travis\.yml$
