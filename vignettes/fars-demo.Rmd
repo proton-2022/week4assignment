@@ -1,0 +1,57 @@
+---
+title: "Introduction to week4assignment"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars-demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>", 
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(week4assginment)
+```
+
+The __week4assginment__ package provides functions to read, summarize and visualize data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. 
+
+## 1. Data reading 
+
+The funciton `fars_read_years()` reads FARS data for a single year or a list of years (an integer or a string). A `tbl_df` object or a list of such object will be returned. 
+
+```{r}
+data1 <- fars_read_years(2013)
+data2 <- fars_read_year(c(2013, 2014))
+data3 <- fars_read_year("2013")
+```
+
+Alternatively, data from an specific year can be read by parsing in the filename constructed by `make_filename()` to `fars_read()`. 
+
+```{r}
+fn <- make_filename(2013)
+data4 <- fars_read(fn)
+```
+
+## 2. Data summary 
+
+The __week4assignment__ package also provides the function `fars_summarize_year()` to summarize the number of accidents in each month for specific years. 
+
+```{r}
+summary_table1 <- fars_summarize_years(2013)
+summary_table2 <- fars_summarize_years(c(2013, 2014))
+summary_table3 <- fars_summarize_years("2013")
+```
+
+## 3. Data visualization 
+The function `fars_map_state()` can be used to plot the locations of accidents for a specific state in a year. States are numbered 1 to 51. A plot will be made which shows a map of the state of interest, and dots representing 
+
+```{r}
+fars_map_state(1, 2013)
+fars_map_state(19, 2014)
+```
