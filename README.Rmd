@@ -31,16 +31,4 @@ devtools::install_github("proton-2022/week4assignment")
 
 ## Example
 
-This is a basic example for using the week4assignment package:
-
-```{r example, eval=FALSE}
-library(week4assginment)
-# read data
-dat <- fars_read_years(c(2013, 2014))
-# summarize data 
-summary_table <- fars_summarize_years(c(2013, 2014))
-# visualize data 
-fars_map_state(1, 2013)
-```
-
 Please see the vignettes for details in usage. 
